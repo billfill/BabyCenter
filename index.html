@@ -10,36 +10,53 @@
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
-  	<script src="./src/js/content.js"></script>
+  	<script src="./src/js/contentPersonal.js"></script>
+  	<script src="./src/js/contentCity.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+  	<style type="text/css" media="screen">
+  		.logo{
+  			text-decoration: none;
+  			color: black;
+  		}
+  		.logo:hover{
+  			text-decoration: none;
+  		}
+  	</style>
 </head>
 <body>
-	<div class="container">
-	  <h2>台北市嬰幼兒照顧服務中心列表</h2>
-	  	<b class="col-md-6 text-left">請善用CTRL＋Ｆ搜尋您想要的資料</b>
-	  	<p class="col-md-6 text-right">資料來源:<a href="http://data.taipei/">台北市政府資料開放平台</a></p>
-	  <ul class="nav nav-tabs">
-	    <li class="active"><a data-toggle="tab" href="#home">公辦民營托嬰中心</a></li>
-	    <li><a data-toggle="tab" href="#menu1">臺北市私立托嬰中心</a></li>
-	  </ul>
-	
-	  <div class="tab-content">
-	    <div id="home" class="tab-pane fade in active">
-			<div class="centerList row">
-				<ul class="list-group">
-					<!-- ajax content.js -->								
-				</ul>
-			</div>
-	    </div>
-	    <div id="menu1" class="tab-pane fade">
-			<div class="personalList row">
-				<ul class="list-group">
-					<!-- ajax content.js -->								
-				</ul>
-			</div>
-	    </div>
-	  </div>
-	</div>	
+	<header class="container">
+	  	<a class="logo" href="index.html"><h2 class="row">台北市嬰幼兒照顧服務中心列表</h2></a>
+        <div class="input-group row">
+          <input id="search" type="text" class="form-control" placeholder="Search">
+          <div class="input-group-btn">
+            <button id="go" class="btn btn-default">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+	   <p class="row text-right">資料來源:<a href="http://data.taipei/">台北市政府資料開放平台</a></p>			
+	</header><!-- /header -->
+	<main class="container">
+	  	<ul class="nav nav-tabs">
+	    	<li class="active"><a data-toggle="tab" href="#home">公辦民營托嬰中心</a></li>
+	    	<li><a data-toggle="tab" href="#menu1">臺北市私立托嬰中心</a></li>
+	  	</ul>
+	  	<div class="tab-content">
+	    	<div id="home" class="tab-pane fade in active">
+				<div class="centerList row">
+					<ul class="list-group">
+						<!-- ajax content.js -->								
+					</ul>
+				</div>
+	    	</div>
+	    	<div id="menu1" class="tab-pane fade">
+				<div class="personalList row">
+					<ul class="list-group">
+						<!-- ajax content.js -->								
+					</ul>
+				</div>
+	    	</div>
+	  	</div>		
+	</main>
 </body>
 </html>
