@@ -35,7 +35,8 @@ $(function(){
 			})
 			$(".centerList>ul").html(Html);
 			// 收尋功能
-			$("#go").click(function(){
+			$("form").submit(function(e){
+				e.preventDefault();
 				let selectedHtml = "";
 				var searchVal = $("#search").val()
 				console.log(searchVal)

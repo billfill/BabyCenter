@@ -1,5 +1,10 @@
-
 $(function(){
+	//回上頭
+	$(".goTop").click(function(){
+		$("body").animate({scrollTop:0},500)
+		console.log("clicked")
+	})
+	//私立托嬰content
 	$.ajax({
 		url: "https://json2jsonp.com/?url=http%3A%2F%2Fdata.taipei%2Fopendata%2Fdatalist%2FapiAccess%3Fscope%3DresourceAquire%26rid%3De7cdaca3-e9da-46f9-b857-395e6e8e06a6&callback=person",
 		type: 'GET',
